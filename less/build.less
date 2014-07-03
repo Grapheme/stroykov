@@ -1,0 +1,220 @@
+.inner-main {
+	width: 100%;
+	max-width: 1224rem / @htmlFontSize;
+	margin: 0 0 0 74rem / @htmlFontSize;
+
+	h1 {
+		margin: 0 0 32rem / @htmlFontSize;
+
+		font-size: 36em / @htmlFontSize;
+		line-height: .95;
+		text-transform: uppercase;
+	}
+}
+
+.tabs {
+	.list-unstyled;
+	margin: 0 0 60rem / @htmlFontSize;
+
+	li {
+		.transition;
+		.box-sizing;
+		display: inline-block;
+		height: 21rem / @htmlFontSize;
+		margin: 0 .8rem 0 0;
+		padding: 5rem / @htmlFontSize 12rem / @htmlFontSize;
+		font-size: 14em / @htmlFontSize;
+		line-height: 1;
+		cursor: pointer;
+
+		text-transform: uppercase;
+
+		&:hover {
+			background: #000;
+			color: #fff;
+		}
+
+		&.active {
+			background: #000;
+			color: #fff;
+			cursor: default;
+		}
+	}
+}
+
+.tabs-content {
+	.tab {
+		.transition;
+		display: none;
+		position: relative;
+		opacity: 0;
+		z-index: -1;
+
+		&.active {
+			display: block;
+			opacity: 1;
+			z-index: 1;
+		}
+	}
+	.tab-info {
+		max-width: 940rem / @htmlFontSize;
+
+		&.f-team {
+			max-width: none;
+
+			strong {
+				font-size: 14em / @htmlFontSize;
+				line-height: 19.2 / 14;
+			}
+
+			.consist-ul {
+				.list-unstyled;
+				margin: 0 0 2rem;
+				font-size: 14em / @htmlFontSize;
+				line-height: 22.6 / 14;
+			}
+		}
+
+		.info-desc {
+			min-height: 465rem / @htmlFontSize;
+			margin: 0 0 35rem / @htmlFontSize;
+			padding: 0 108rem / @htmlFontSize 0 340rem / @htmlFontSize;
+		
+			background: url(../img/info.jpg) 0 0 no-repeat;
+
+			font-size: 14em / @htmlFontSize;
+			font-weight: 300;
+			line-height: 19.6em / 14;
+
+			&.football {
+				padding: 0 0 0 681rem / @htmlFontSize;
+				background: url(../img/team.jpg) 0 0 no-repeat;
+			}
+		}
+		.diploma-list {
+			.list-unstyled;
+			margin: 0 0 107rem / @htmlFontSize;
+			li {
+				display: inline-block;
+				width: 100rem / @htmlFontSize;
+				height: 147rem / @htmlFontSize;
+				margin: 0 15rem / @htmlFontSize 29rem / @htmlFontSize 0;
+
+				&:last-child {
+					margin: 0;
+				}
+			}
+		}
+	}
+	.tab-obj {
+		margin: 0 0 144rem / @htmlFontSize;
+
+		.objects-ul {
+			.list-unstyled;			
+		}
+
+		.object-li {
+			display: inline-block;
+			width: 284rem / @htmlFontSize;
+			height: 346rem / @htmlFontSize;
+			margin: 0 27rem / @htmlFontSize 0 0;
+
+			vertical-align: top;
+
+			&:nth-child(4n) {
+				margin: 0;
+			}
+		}
+
+		.object-head {
+			width: 100%;
+			height: 208rem / @htmlFontSize;
+
+			img {
+				width: 100%;
+				height: 100%;
+			}
+		}
+
+		.object-body {
+			.box-sizing;
+			width: 100%;
+			height: 138rem / @htmlFontSize;
+			padding: 1rem 0 0;
+		}
+
+		.obj-name {
+			margin: 0 0 18rem / @htmlFontSize;
+			font-size: 1em;
+			line-height: 19.2em / 16;
+			text-transform: uppercase;
+		}
+
+		.obj-data {
+			font-size: 14em / @htmlFontSize;
+			line-height: 16.8em / 14;
+			color: #666;
+			color: rgba(0, 0, 0, .5);
+		}
+	}
+	.tab-cont {
+		min-height: 484rem / @htmlFontSize;
+
+		address {
+			font-style: normal;
+		}
+
+		.part {
+			float: left;
+		}
+
+		.part-left {
+			width: 625rem / @htmlFontSize;
+			font-size: 16em / @htmlFontSize;
+			line-height: 22.4em / 16;
+
+			a {
+				text-decoration: none;
+				color: inherit;
+			}
+
+			a[href^="mailto"] {
+				.transition;
+				border-bottom: 1px dotted;
+
+				&:hover {
+					border-color: transparent;
+				}
+			}
+		}
+
+		header {
+			font-weight: 700;
+		}
+
+		.details-dl {
+			dt {
+				display: inline-block;
+				font-weight: 700;
+				font-size: 14em / @htmlFontSize;
+				line-height: 16.8em / 14;
+				border-bottom: 1px dotted;
+				cursor: pointer;
+			}
+			dd {
+				.box-sizing;
+				height: 0;
+				overflow: hidden;
+				margin: 0;
+				padding: 0;
+				font-size: 14em / @htmlFontSize;
+				line-height: 19.6em / 14;
+
+				&.opened {
+					height: auto;
+					padding: .5rem 0 2rem;
+				}
+			}
+		}
+	}
+}
