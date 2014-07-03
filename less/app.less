@@ -1,0 +1,135 @@
+html, body {
+	height: 100%;
+	font-family: 'proxima_nova', sans-serif;
+}
+.wrapper {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -77rem / @htmlFontSize; /* the bottom margin is the negative value of the footer's height */
+
+	&:after {
+		content: '';
+		display: block;
+	}
+}
+
+.header {
+	height: 130rem / @htmlFontSize;
+
+	.logo {
+		position: absolute;
+		top: 0;
+		left: 74rem / @htmlFontSize;
+		width: 200rem / @htmlFontSize;
+		height: 57rem / @htmlFontSize;
+		margin: 0;
+
+		background: url(../img/logo.png) no-repeat 0 0 e('/') 100% 100%;
+		text-indent: -9999px;
+	}
+}
+
+.main {
+	position: absolute;
+	top: 130rem / @htmlFontSize;
+	left: 74rem / @htmlFontSize;
+	right: 74rem / @htmlFontSize;
+	bottom: 77rem / @htmlFontSize;
+
+	&:hover {
+		.index-sect {
+			opacity: .5;
+		}
+	}
+
+	.index-sect {
+		&:hover {
+			opacity: 1;
+
+			.sect-head {
+				-webkit-transform: translate(0, 0);
+				transform: translate(0, 0);
+			}
+		}
+	}
+}
+
+.index-sect {
+	.transition;
+	overflow: hidden;
+	position: relative;
+	display: inline-block;
+	width: 24.9%;
+	height: 100%;
+	margin: 0 .1% 0 0;
+	vertical-align: top;
+
+	&:last-child {
+		margin: 0;
+	}
+
+	&.club {
+		.full-abs {
+			background: url(../img/index-parts/01.jpg) no-repeat 0 0 e('/') cover;
+		}
+	}
+	&.soap {
+		.full-abs {
+			background: url(../img/index-parts/02.jpg) no-repeat 0 0 e('/') cover;
+		}
+	}
+	&.works {
+		.full-abs {
+			background: url(../img/index-parts/03.jpg) no-repeat 0 0 e('/') cover;
+		}
+	}
+	&.football {
+		.full-abs {
+			background: url(../img/index-parts/04.jpg) no-repeat 0 0 e('/') cover;
+		}
+	}
+
+	.sect-head {
+		.transition;
+		position: absolute;
+		z-index: 1;
+		left: 0;
+		bottom: 37rem / @htmlFontSize;
+		padding: .5rem 1rem;
+
+		background: #000;
+		color: #fff;
+		font-size: 20em / @htmlFontSize;
+		line-height: 24em / 20;
+		font-weight: 500;
+		text-transform: uppercase;
+
+		-webkit-transform: translate(-100%, 0);
+		transform: translate(-100%, 0);
+	}
+
+	.full-abs {
+		.transition;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+
+		&:hover {
+			-webkit-transform: scale(1.05);
+			transform: scale(1.05);
+		}
+	}
+}
+
+
+.footer {
+	height: 77rem / @htmlFontSize;
+	margin: 0 0 0 74rem / @htmlFontSize;
+	line-height: 77rem / @htmlFontSize;
+
+	font-size: 14em / @htmlFontSize;
+	color: #666;
+}
